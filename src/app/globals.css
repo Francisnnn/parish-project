@@ -1,8 +1,18 @@
 @import "tailwindcss";
+@import "../styles/parish.css";
+@import "../styles/homepage.css";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --trinity-gold: hsl(40, 38%, 85%);
+  --trinity-blue: #000000;
+  --trinity-white: #ffffff;
+  --green: #0d5d0d;
+  --maroon: #000000;
+  --light-grey: #f5f5f5;
+  --dark-grey: #000000;
+  --light-blue: #e6f0ff;
 }
 
 @theme inline {
