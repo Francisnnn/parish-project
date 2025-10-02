@@ -1,0 +1,259 @@
+:root {
+    --trinity-gold: #D4AF37;
+    --trinity-blue: #000080;
+    --trinity-white: #FFFFFF;
+    --outstation-brown: #8B4513;
+    --outstation-lightbrown: #D2B48C;
+    --green: #0D5D0D;
+    --maroon: #800000;
+    --light-grey: #f5f5f5;
+    --dark-grey: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: tahoma;
+    transition: all ease-in-out 0.2s;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-grey);
+    background-color: var(--trinity-white);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    /* background: linear-gradient(to right, var(--trinity-blue), var(--maroon));
+    color: var(--trinity-white); */
+    background-color: rgb(199, 197, 197);
+    color: black;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-group {
+    display: flex;
+    margin-right: 20px;
+}
+
+/* Make the logo small at top-left */
+.logo {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;   /* remove background circle */
+    border: none;       /* remove border */
+    padding: 0;
+    height: auto;
+    width: auto;
+}
+
+.logo img {
+    height: 40px;       /* adjust logo size */
+    width: auto;        /* keep proportions */
+    display: block;
+}
+
+.title-group h1 {
+    font-size: 1.8rem;
+    /* color: var(--trinity-white); */
+    color: black;
+    margin: 0;
+    font-family: tahoma;
+}
+
+.title-group h2 {
+    font-size: 1.1rem;
+    /* color: var(--trinity-gold); */
+    color: black;
+    margin: 0;
+}
+
+.title-group p {
+    font-size: 0.9rem;
+    /* color: var(--trinity-white); */
+    color: black;
+    margin: 0;
+}
+nav {
+    background-color: var(--outstation-lightbrown);
+    padding: 0.5rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    color: var(--outstation-darkbrown);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: var(--white);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--outstation-darkbrown);
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1{
+    margin-top: 70px;
+    font-family: tahoma;
+    color: brown;
+}
+
+main h3{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-family: tahoma;
+}
+
+.btn{
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+}
+
+.btn button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.btn .youtube{
+    background-color: red;
+}
+
+.btn .youtube:hover{
+    background-color: rgb(201, 3, 3);
+    border-radius: 12px;
+}
+
+.btn .facebook{
+    background-color: blue;
+}
+
+.btn .facebook:hover{
+    background-color: rgb(2, 2, 180);
+    border-radius: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .logo-group {
+        margin: 0 0 15px 0;
+        justify-content: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 5px 0;
+    }
+
+main h1{
+    font-size: 22px;
+}
+
+main h3{
+    font-size: 14px;
+}
+
+.btn button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+    
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Member Biodata - Registration</title>
+    <link rel="stylesheet" href="bio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Church Member Registration</h1>
+        <p class="subtitle">Please fill in your details to register as a member.</p>
+        
+        <form id="biodataForm" action="register.php" method="POST" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Fullname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth *</label>
+                <input type="date" id="dob" name="date_of_birth" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender *</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="maritalStatus">Marital Status *</label>
+                <select id="maritalStatus" name="maritalStatus" required>
+                    <option value="" disabled selected>Select Status</option>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Separated">Separated</option>
+                    <option value="Divorced">Divorced</option>
+                    <option value="Widowed">Widowed</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Church Location *</label>
+                <select id="location" name="outstation_name" required>
+                    <option value="" disabled selected>Select your location</option>
+                    <option value="Parish">Parish</option>
+                    <option value="Outstation">Outstation</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Address *</label>
+                <input type="text" id="address" name="address" placeholder="Your Location" required>
+            </div>
+
+
+            <div class="form-group">
+                <label>Societies (Select all that apply)</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="society[]" value="Legion of Mary"> Legion of Mary</label>
+                    <label><input type="checkbox" name="society[]" value="Sacred Heart of Jesus Society"> Sacred Heart of Jesus Society</label>
+                    <label><input type="checkbox" name="society[]" value="Immaculate Heart of Mary Society"> Immaculate Heart of Mary Society</label>
+                    <label><input type="checkbox" name="society[]" value="Pontifical Mission Societies (PMS)"> Pontifical Mission Societies (PMS)</label>
+                    <label><input type="checkbox" name="society[]" value="Altar Servers Association"> Altar Servers Association</label>
+                    <label><input type="checkbox" name="society[]" value="Choir / Singing Ministry"> Choir / Singing Ministry</label>
+                    <label><input type="checkbox" name="society[]" value="Lay Readers / Lectors"> Lay Readers / Lectors</label>
+                    <label><input type="checkbox" name="society[]" value="Eucharistic Ministers"> Eucharistic Ministers</label>
+                    <label><input type="checkbox" name="society[]" value="St. Vincent de Paul Society"> St. Vincent de Paul Society</label>
+                    <label><input type="checkbox" name="society[]" value="Caritas / Justice and Peace Commission"> Caritas / Justice and Peace Commission</label>
+                    <label><input type="checkbox" name="society[]" value="Catholic Women Organization (CWO)"> Catholic Women Organization (CWO)</label>
+                    <label><input type="checkbox" name="society[]" value="Catholic Men Organization (CMO)"> Catholic Men Organization (CMO)</label>
+                    <label><input type="checkbox" name="society[]" value="Young Catholic Men Organization (YCMO)"> Young Catholic Men Organization (YCMO)</label>
+                    <label><input type="checkbox" name="society[]" value="Catholic Youth Organization of Nigeria (CYON)"> Catholic Youth Organization of Nigeria (CYON)</label>
+                    <label><input type="checkbox" name="society[]" value="Catholic Boys Organization (CBO)"> Catholic Boys Organization (CBO)</label>
+                    <label><input type="checkbox" name="society[]" value="Catholic Girls Organization (CGO)"> Catholic Girls Organization (CGO)</label>
+                    <label><input type="checkbox" name="society[]" value="Confraternity of the Holy Rosary"> Confraternity of the Holy Rosary</label>
+                    <label><input type="checkbox" name="society[]" value="Divine Mercy Society"> Divine Mercy Society</label>
+                    <label><input type="checkbox" name="society[]" value="Catholic Charismatic Renewal (CCR)"> Catholic Charismatic Renewal (CCR)</label>
+                    <label><input type="checkbox" name="society[]" value="Knights of the Church"> Knights of the Church</label>
+                    <label><input type="checkbox" name="society[]" value="Young Christian Worker (YCW)"> Young Christian Worker (YCW)</label>
+                    <label><input type="checkbox" name="society[]" value="Saint Anne's Society"> Saint Anne's Society</label>
+                    <label><input type="checkbox" name="society[]" value="Saint Patrick's Society"> Saint Patrick's Society</label>
+                    <label><input type="checkbox" name="society[]" value="Saint Mary's Society"> Saint Mary's Society</label>
+                    <label><input type="checkbox" name="society[]" value="Saint Michael's Society"> Saint Michael's Society</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="occupation">Occupation *</label>
+                <input type="text" id="occupation" name="occupation" required placeholder="what do you do....">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email </label>
+                <input type="email" id="email" name="email" placeholder="Email Address">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+234">
+            </div>
+
+<div class="form-group">
+                <label for="phone">Other Phone Number </label>
+                <input type="tel" id="phone" name="phone" placeholder="+234">
+            </div>
+
+            <div class="form-group">
+                <label for="about">About Me</label>
+                <textarea id="about" name="about" rows="5" placeholder="Tell us a bit about yourself..."></textarea>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <div class="output" id="output"></div>
+    </div>
+    </body>
+</html>

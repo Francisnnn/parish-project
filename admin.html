@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Holy Trinity Catholic Church</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --trinity-gold: #D4AF37;
+            --trinity-blue: #8B4513;
+            --trinity-white: #eeeeee;
+            --outstation-brown: #8B4513;
+            --green: #0D5D0D;
+            --maroon: #800000;
+            --light-grey: #f5f5f5;
+            --dark-grey: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        body {
+            background-color: var(--trinity-white);
+            color: var(--dark-grey);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23000080" opacity="0.1"/><path d="M30,30 L70,30 L70,70 L30,70 Z" fill="none" stroke="%23D4AF37" stroke-width="0.5"/><circle cx="50" cy="50" r="20" fill="none" stroke="%23D4AF37" stroke-width="0.5"/></svg>') center/cover;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 450px;
+            background: rgb(216, 195, 195);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        .login-header {
+            background: linear-gradient(to right, var(--trinity-blue), var(--maroon));
+            color: var(--trinity-white);
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .login-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--trinity-gold);
+        }
+
+        .login-header p {
+            opacity: 0.9;
+        }
+
+        .login-header i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--trinity-gold);
+        }
+
+        .login-form {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--trinity-blue);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--trinity-blue);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 0, 128, 0.2);
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--trinity-gold);
+            color: var(--trinity-blue);
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            background: var(--trinity-white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .password-container {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: var(--trinity-blue);
+        }
+
+        .message {
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        .error {
+            background-color: #b92740;
+            color: #9c5249;
+            border: 1px solid #ffcdd2;
+        }
+
+        .success {
+            background-color: #e8f5e9;
+            color: #2ecc71;
+            border: 1px solid #c8e6c9;
+        }
+
+        .password-rules {
+            font-size: 0.85rem;
+            color: var(--trinity-blue);
+            margin-top: 5px;
+            opacity: 0.8;
+        }
+
+        .demo-credentials {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: var(--light-grey);
+            border-radius: 5px;
+            border-left: 4px solid var(--trinity-gold);
+        }
+
+        .demo-credentials h3 {
+            margin-bottom: 10px;
+            color: var(--trinity-blue);
+            font-size: 1.1rem;
+        }
+
+        .back-to-site {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-to-site a {
+            color: var(--trinity-blue);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .back-to-site a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .login-container {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <i class="fas fa-church"></i>
+            <h1>Holy Trinity Catholic Church</h1>
+            <p>Admin Portal - Content Management System</p>
+        </div>
+        <div class="login-form">
+            <div class="message error" id="error-message"></div> 
+            <div class="message success" id="success-message"></div>
+            
+            <form id="login-form" action="login.php" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" name="username" id="username" placeholder="Enter your username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-container">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" required>
+                        <span class="toggle-password" id="toggle-password">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                    <p class="password-rules">Password is case-sensitive and must be at least 8 characters long.</p>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Login to Dashboard</button>
+            </form>
+            
+           <!-- <div class="demo-credentials">
+                <h3>NOTE:</h3>
+                <p>Login is now handled securely by **login.php** on your server.</p>
+                <p>Demo credentials have been replaced with secure backend authentication.</p>
+            </div>-->
+
+            <div class="back-to-site">
+                <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Main Website</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Only keeping the password visibility toggle, as login is now handled by PHP
+            const togglePassword = document.getElementById('toggle-password');
+            const passwordInput = document.getElementById('password');
+            
+            // Toggle password visibility
+            if (togglePassword && passwordInput) {
+                togglePassword.addEventListener('click', function() {
+                    const icon = this.querySelector('i');
+                    
+                    if (passwordInput.type === 'password') {
+                        passwordInput.type = 'text';
+                        icon.classList.remove('fa-eye');
+                        icon.classList.add('fa-eye-slash');
+                    } else {
+                        passwordInput.type = 'password';
+                        icon.classList.remove('fa-eye-slash');
+                        icon.classList.add('fa-eye');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
