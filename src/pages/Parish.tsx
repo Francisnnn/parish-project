@@ -350,13 +350,13 @@ export default function Parish() {
                 </p>
               </div>
 
-             {/* <div className="flex gap-4 mt-8">
-                {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => 
-                ( <a key={i} href="#" className="w-11 h-11 rounded-full bg-[#dda8a8] text-white flex items-center justify-center hover:-translate-y-1 transition-smooth">
+              <div className="flex gap-4 mt-8">
+                {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
+                  <a key={i} href="#" className="w-11 h-11 rounded-full bg-[#dda8a8] text-white flex items-center justify-center hover:-translate-y-1 transition-smooth">
                     <Icon className="h-5 w-5" />
                   </a>
                 ))}
-              </div>*/}
+              </div>
             </div>
 
             {/* Contact Form */}
@@ -437,13 +437,13 @@ export default function Parish() {
                 <li><Link to="/register" className="opacity-90 hover:opacity-100 hover:text-[#b5892b] hover:pl-1 transition-all">Register</Link></li>
               </ul>
             </div>
-           { /* <div>
+            <div>
               <h3 className="text-[#b5892b] text-xl font-serif mb-5 pb-3 border-b border-white/20">Resources</h3>
               <ul className="space-y-3">
                 <li><a href="#" className="opacity-90 hover:opacity-100 hover:text-[#b5892b] hover:pl-1 transition-all flex items-center gap-2">Homily</a></li>
                 <li><a href="#" className="opacity-90 hover:opacity-100 hover:text-[#b5892b] hover:pl-1 transition-all flex items-center gap-2">📄 Bulletin</a></li>
               </ul>
-            </div>*/}
+            </div>
           </div>
           <div className="pt-6 border-t border-white/10 text-center opacity-80">
             <p>© 2025 Holy Trinity Catholic Church. All rights reserved.</p>

@@ -31,7 +31,7 @@ export const OutstationFooter = () => {
           </div>
         </div>
         <div className="mt-8 pt-4 border-t border-white/10">
-          <p>&copy; 2025 St. John of the Cross Catholic Outstation, Elebu, Ibadan. All rights reserved.</p>
+          <p>&copy; 2023 St. John of the Cross Catholic Outstation, Elebu, Ibadan. All rights reserved.</p>
         </div>
       </div>
     </footer>

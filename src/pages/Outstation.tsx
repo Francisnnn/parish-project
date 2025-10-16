@@ -93,7 +93,7 @@ export default function Outstation() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {[
-              { title: "Our History", content: "St. John of the Cross Outstation was established in 2005 to serve the growing Catholic community in Elebu and surrounding areas. We began with just 10 families and have grown to over 150 families today." },
+              { title: "Our History", content: "St. John of the Cross Outstation was established in 2005 to serve the growing Catholic community in Elebu and surrounding areas. We began with just 20 families and have grown to over 150 families today." },
               { title: "Our Patron Saint", content: "St. John of the Cross was a Spanish Catholic priest, mystic, and Doctor of the Church. He is known for his reforms and writings on spiritual growth and the dark night of the soul." },
               { title: "Our Mission", content: "To nurture a vibrant Catholic community through worship, education, service, and fellowship, following the example of Jesus Christ and our patron saint." }
             ].map((item, i) => (
@@ -285,12 +285,12 @@ export default function Outstation() {
               </p>
               <div className="flex gap-4 mt-5">
                 {[
-                  { icon: "fab fa-facebook-f", href: "www.facebook.com" },
-                  { icon: "fab fa-tiktok", href: "www.tiktok.com" },
-                  { icon: "fab fa-instagram", href: "www.intagram.com" },
-                  { icon: "fab fa-youtube", href: "www.youtube.com" }
+                  { icon: "fab fa-facebook-f", href: "#" },
+                  { icon: "fab fa-twitter", href: "#" },
+                  { icon: "fab fa-instagram", href: "#" },
+                  { icon: "fab fa-youtube", href: "#" }
                 ].map((social, i) => (
-                  <a> key={i} href={social.href} className="text-white bg-[#6f3f22] w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#b5892b] hover:text-[#523826] transition-all"
+                  <a key={i} href={social.href} className="text-white bg-[#6f3f22] w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#b5892b] hover:text-[#523826] transition-all">
                     <i className={social.icon}></i>
                   </a>
                 ))}

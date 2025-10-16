@@ -35,7 +35,7 @@ export const Footer = () => {
         <div>
           <h3 className="text-xl font-bold mb-4">Follow Us</h3>
           <div className="flex gap-4">
-            <a> href="#" className="hover:text-primary transition-smooth"
+            <a href="#" className="hover:text-primary transition-smooth">
               <Facebook className="h-6 w-6" />
             </a>
             <a href="#" className="hover:text-primary transition-smooth">

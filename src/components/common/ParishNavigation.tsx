@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Home, Church, Clock, Mail, Import } from "lucide-react";
+import { Home, Church, Clock, Mail } from "lucide-react";
 
 interface NavItem {
   label: string;

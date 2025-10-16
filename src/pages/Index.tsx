@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-{/*import { Church, ArrowRight, Calendar, Heart, Users, BookOpen } from "lucide-react";*/}
+import { Church, ArrowRight, Calendar, Heart, Users, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { LeaderCard } from "@/components/common/LeaderCard";
 import { BackToTop } from "@/components/common/BackToTop";
@@ -39,7 +39,7 @@ const Index = () => {
           <div className="flex items-center justify-center gap-2 sm:gap-3 text-center">
             <Calendar className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
             <p className="text-xs sm:text-sm md:text-base font-medium">
-              Join us for Sunday Mass | Parish: 08:00AM | Outstation: 06:30AM
+              Join us for Sunday Mass | Parish: 7AM, 9AM, 11AM, 5PM | Outstation: 8AM
             </p>
           </div>
         </div>
@@ -102,7 +102,7 @@ const Index = () => {
                 </p>
                 <div className="bg-primary/5 rounded-lg p-3 sm:p-4 space-y-2">
                   <p className="font-semibold text-sm sm:text-base">Sunday Masses</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">8:00 AM</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">7:00 AM • 9:00 AM • 11:00 AM • 5:00 PM</p>
                   <p className="text-xs sm:text-sm text-muted-foreground">Weekday Masses Available</p>
                 </div>
                 <Link to="/parish" className="block">
@@ -133,8 +133,8 @@ const Index = () => {
                 </p>
                 <div className="bg-[hsl(var(--outstation-brown))]/5 rounded-lg p-3 sm:p-4 space-y-2">
                   <p className="font-semibold text-sm sm:text-base">Mass Schedule</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Sunday: 6:30 AM</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Fri 6:00 PM</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Sunday: 8:00 AM</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Weekdays: Wed & Fri 6:00 PM</p>
                 </div>
                 <Link to="/outstation" className="block">
                   <Button 
