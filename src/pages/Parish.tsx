@@ -117,16 +117,16 @@ export default function Parish() {
       {/* Mass Times Section */}
       <section id="mass-times" className="py-16 px-6 bg-[#c06c50]">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-serif text-center mb-12 text-white section-underline">Mass Time & Schedule</h2>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <h2 className="text-4xl font-serif text-center mb-10 text-white section-underline">Mass Time & Schedule</h2>
+          <div className="grid md:grid-cols-3 gap-6 max-w-xl mx-auto">
             {[
               { title: "Weekdays", times: ["Monday 5:45 AM", "Tuesday & Thursday 6:00 AM"] },
               { title: "Saturdays", times: ["Morning Mass: 7:00 AM", "Confessions: 8:00 AM"] },
               { title: "Sundays", times: ["8:00 AM (English)"] },
             ].map((schedule, i) => (
-              <Card key={i} className="shadow-elegant hover:-translate-y-2 transition-smooth border-l-4 border-[#b5892b] animate-on-scroll">
-                <CardContent className="pt-8">
-                  <h3 className="text-2xl font-serif mb-4 text-[#6b2f2f] border-b-2 border-[#b5892b] pb-3">{schedule.title}</h3>
+              <Card key={i} className="shadow-elegant hover:-translate-y-2 transition-smooth border-l-6 border-[#b5892b] animate-on-scroll">
+                <CardContent className="pt-5">
+                  <h3 className="text-2xl font-serif mb-3 text-[#6b2f2f] border-b-2 border-[#b5892b] pb-3">{schedule.title}</h3>
                   {schedule.times.map((time, j) => (
                     <p key={j} className="flex items-center gap-2 mb-3 text-base">
                       <Clock className="h-4 w-4 text-[#0b3b57]" /> {time}
@@ -142,8 +142,8 @@ export default function Parish() {
       {/* About Section */}
       <section id="about" className="py-16 px-6 bg-white">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-serif text-center mb-12 text-[#6b2f2f] section-underline">About Our Parish</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <h2 className="text-4xl font-serif text-center mb-10 text-[#6b2f2f] section-underline">About Our Parish</h2>
+          <div className="grid md:grid-cols-2 gap-4">
             {[
               { title: "Our History", content: "Holy Trinity Catholic Church was established in 1995 to serve the growing Catholic community in Aba-Panu Apata and surrounding areas. We began with just 35 families and have grown to over 150 families today." },
               { title: "Our Mission", content: "To be a vibrant Catholic community that worships together, grows in faith, and serves others following the example of Jesus Christ." },
@@ -153,9 +153,9 @@ export default function Parish() {
                 <CardHeader className="bg-[#0b3b57] text-white">
                   <CardTitle>{item.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="pt-6">
-                  <p className="mb-4">{item.content}</p>
-                  <Button className="bg-[#b5892b] hover:bg-[#0b3b57] text-white">Learn More</Button>
+                <CardContent className="pt-4">
+                  <p className="mb-0">{item.content}</p>
+                  {/*<Button className="bg-[#b5892b] hover:bg-[#0b3b57] text-white">Learn More</Button>*/}
                 </CardContent>
               </Card>
             ))}
@@ -164,13 +164,13 @@ export default function Parish() {
       </section>
 
       {/* Leadership Section */}
-      <section className="py-16 px-6 bg-[#f6f4f1]">
+      <section className="py-16 px-2 bg-[#f6f4f1]">
         <div className="container mx-auto">
           <h2 className="text-4xl font-serif text-center mb-12 text-[#6b2f2f] section-underline">Our Spiritual Leaders</h2>
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="flex flex-wrap justify-center gap-2">
             <LeaderCard imageSrc="/img/pope leo xiv.jpeg" title="His Holiness" name="Pope Leo XIV" />
             <LeaderCard imageSrc="/img/bishop.jpg" title="His Grace" name="Most Rev. Dr. Gabriel Leke Abegunrin" subtitle="Archbishop of Ibadan" />
-            <LeaderCard imageSrc="/img/Steve.jpg" title="" name="Rev. Fr Stephen Udechukwu" subtitle="Parish Priest" />
+            <LeaderCard imageSrc="/img/Steve.jpg" title="" name="Rev. Fr Stephen Udechukwu" subtitle="Priest In-Charge" />
           </div>
         </div>
       </section>
@@ -179,7 +179,7 @@ export default function Parish() {
       <section id="sacraments" className="py-16 px-6 bg-white">
         <div className="container mx-auto">
           <h2 className="text-4xl font-serif text-center mb-12 text-[#6b2f2f] section-underline">Sacraments</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {[
               { title: "Baptism", content: "Baptisms are held on the first and third Sundays of each month. Preparation classes are required for parents and godparents." },
               { title: "First Communion", content: "Children typically receive First Communion after two years of religious education. Classes begin in September." },
@@ -191,7 +191,7 @@ export default function Parish() {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <p className="mb-4">{sacrament.content}</p>
-                  <Button className="bg-[#b5892b] hover:bg-[#0b3b57] text-white">Learn More</Button>
+                  <h2>Enroll your children</h2>
                 </CardContent>
               </Card>
             ))}
@@ -203,20 +203,20 @@ export default function Parish() {
       <section id="ministries" className="py-16 px-6 bg-gradient-to-b from-white to-[#f3efe9]">
         <div className="container mx-auto">
           <h2 className="text-4xl font-serif text-center mb-12 text-[#6b2f2f] section-underline">Parish Ministries</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-4">
             {[
-              { 
-                icon: Music, 
-                title: "Choir Ministry", 
+              {
+                icon: Music,
+                title: "Choir Ministry",
                 desc: "Our choir enhances liturgical celebrations with beautiful sacred music.",
                 details: [
-                  { label: "Rehearsals", value: "Saturdays at 5:00 PM" },
-                  { label: "Contact Choir Ma", value: "Mr. Festus Abibu - 09063410785" },
-                  { label: "Contact Choir Ma", value: "Mr. Godwin - 08032123304" },
+                  { label: "Rehearsals", value: "Friday & Saturdays at 5:00 PM" },
+                  { label: "Contact Choir Ms", value: "Mr. Festus Abibu - 09063410785" },
+                  { label: "Contact Choir Ms", value: "Mr. Godwin - 08032123304" },
                 ]
               },
-              { 
-                icon: Hand, 
+              {
+                icon: Hand,
                 title: "St. Vincent the Poor",
                 desc: "We serve the needy in our community through various outreach programs.",
                 details: [
@@ -224,24 +224,26 @@ export default function Parish() {
                   { label: "Contact", value: "Mr. Chukwu - 0805 123 4567" },
                 ]
               },
-              { 
-                icon: Book, 
-                title: "Bible Study", 
+              
+              {
+                icon: Book,
+                title: "Bible Study",
                 desc: "Deepen your understanding of Scripture through our weekly study groups.",
                 details: [
-                  { label: "Schedule", value: "Wednesdays at 6:00 PM" },
-                  { label: "Contact", value: "Dr. Okoro - 0802 987 6543" },
+                  { label: "Schedule", value: "Comming soon" },
+                  /* { label: "Contact", value: "Dr. Okoro - 0802 987 6543" },*/
                 ]
-              },
+              }
+              
             ].map((ministry, i) => (
               <Card key={i} className="shadow-card hover:-translate-y-2 transition-smooth animate-on-scroll">
                 <CardHeader className="bg-[#c06c50] text-white text-center">
-                  <ministry.icon className="h-12 w-12 mx-auto mb-3" />
+                  <ministry.icon className="h-12 w-12 mx-auto mb-0" />
                   <CardTitle>{ministry.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="pt-6">
+                <CardContent className="pt-3">
                   <p className="mb-4">{ministry.desc}</p>
-                  <ul className="space-y-2 mb-4">
+                  <ul className="space-y-2 mb-0">
                     {ministry.details.map((detail, j) => (
                       <li key={j} className="flex items-start gap-2 text-sm border-b pb-2">
                         <Clock className="h-4 w-4 text-[#0b3b57] mt-0.5" />
@@ -249,7 +251,7 @@ export default function Parish() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full bg-[#b5892b] hover:bg-[#0b3b57] text-white">Join Us</Button>
+                { /* <Button className="w-full bg-[#b5892b] hover:bg-[#0b3b57] text-white">Join Us</Button>*/}
                 </CardContent>
               </Card>
             ))}
@@ -291,10 +293,10 @@ export default function Parish() {
           <h2 className="text-4xl font-serif text-center mb-12 text-[#6b2f2f] section-underline">Photo Gallery</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { src: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='250' viewBox='0 0 300 250'><rect width='300' height='250' fill='%230b3b57'/><text x='150' y='125' font-family='Arial' font-size='20' fill='%23b5892b' text-anchor='middle'>Church Building</text></svg>", alt: "Church Building", caption: "Our Beautiful Church" },
-              { src: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='250' viewBox='0 0 300 250'><rect width='300' height='250' fill='%230b3b57'/><text x='150' y='125' font-family='Arial' font-size='20' fill='%23b5892b' text-anchor='middle'>Community Event</text></svg>", alt: "Community Event", caption: "Parish Community Gathering" },
-              { src: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='250' viewBox='0 0 300 250'><rect width='300' height='250' fill='%230b3b57'/><text x='150' y='125' font-family='Arial' font-size='20' fill='%23b5892b' text-anchor='middle'>Choir Performance</text></svg>", alt: "Choir Performance", caption: "Choir Ministry" },
-              { src: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='250' viewBox='0 0 300 250'><rect width='300' height='250' fill='%230b3b57'/><text x='150' y='125' font-family='Arial' font-size='20' fill='%23b5892b' text-anchor='middle'>Children's Program</text></svg>", alt: "Children's Program", caption: "Children's Faith Formation" },
+              { src: "img/church-building.jpg", alt: "Church Building", caption: "Our Beautiful Church" },
+              { src: "img/community-event.jpg", alt: "Community Event", caption: "Parish Community Gathering" },
+              { src: "img/choir-performance.jpg", alt: "Choir Performance", caption: "Choir Ministry" },
+              { src: "img/children-program.jpg", alt: "Children's Program", caption: "Children's Faith Formation" },
             ].map((image, i) => (
               <div 
                 key={i} 
@@ -330,7 +332,7 @@ export default function Parish() {
                 </p>
                 <p className="flex items-center gap-4 text-lg">
                   <span className="w-6 text-[#0b3b57]">✉️</span>
-                  info@holytrinityabadan.org
+                  holytrinityabapanu95@gmail.com
                 </p>
               </div>
 
@@ -338,7 +340,7 @@ export default function Parish() {
               <div className="space-y-3">
                 <p className="flex items-center gap-4">
                   <Clock className="h-5 w-5 text-[#0b3b57]" />
-                  Monday-Friday: 9:00 AM - 5:00 PM
+                  Monday-Friday: 9:00 AM - 3:00 PM
                 </p>
                 <p className="flex items-center gap-4">
                   <Clock className="h-5 w-5 text-[#0b3b57]" />
@@ -397,7 +399,7 @@ export default function Parish() {
                       <SelectItem value="sacraments">Sacraments</SelectItem>
                       <SelectItem value="donations">Donations</SelectItem>
                       <SelectItem value="events">Events</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
+                      <SelectItem value="other">Mass intenstion</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -437,13 +439,13 @@ export default function Parish() {
                 <li><Link to="/register" className="opacity-90 hover:opacity-100 hover:text-[#b5892b] hover:pl-1 transition-all">Register</Link></li>
               </ul>
             </div>
-            <div>
+            {/*<div>
               <h3 className="text-[#b5892b] text-xl font-serif mb-5 pb-3 border-b border-white/20">Resources</h3>
               <ul className="space-y-3">
-                <li><a href="#" className="opacity-90 hover:opacity-100 hover:text-[#b5892b] hover:pl-1 transition-all flex items-center gap-2">Homily</a></li>
-                <li><a href="#" className="opacity-90 hover:opacity-100 hover:text-[#b5892b] hover:pl-1 transition-all flex items-center gap-2">📄 Bulletin</a></li>
+                <li><a href="#" className="opacity-90 hover:opacity-100 hover:text-[#b5892b] hover:pl-1 transition-all flex items-center gap-2"></a>Homily</li>
+                <li><a href="#" className="opacity-90 hover:opacity-100 hover:text-[#b5892b] hover:pl-1 transition-all flex items-center gap-2"></a>📄 Bulletin</li>
               </ul>
-            </div>
+            </div>*/}
           </div>
           <div className="pt-6 border-t border-white/10 text-center opacity-80">
             <p>© 2025 Holy Trinity Catholic Church. All rights reserved.</p>

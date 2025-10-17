@@ -13,7 +13,7 @@ export const Footer = () => {
             </div>
             <div className="flex items-center gap-2">
               <Phone className="h-5 w-5 text-primary" />
-              <span className="text-sm">+254 XXX XXX XXX</span>
+              <span className="text-sm">+234 XXX XXX XXX</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="h-5 w-5 text-primary" />
@@ -43,7 +43,7 @@ export const Footer = () => {
             </a>
           </div>
           <p className="text-sm mt-4 opacity-75">
-            © {new Date().getFullYear()} Holy Trinity Catholic Church. All rights reserved.
+            © { new Date().getFullYear() } Holy Trinity Catholic Church. All rights reserved.
           </p>
         </div>
       </div>

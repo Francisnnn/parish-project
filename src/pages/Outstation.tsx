@@ -5,6 +5,7 @@ import { OutstationFooter } from "@/components/outstation/OutstationFooter";
 import { GalleryModal } from "@/components/outstation/GalleryModal";
 import { Music, Heart, Book } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Value } from "@radix-ui/react-select";
 
 export default function Outstation() {
   const { toast } = useToast();
@@ -107,9 +108,9 @@ export default function Outstation() {
                 </div>
                 <div className="p-5">
                   <p className="mb-4">{item.content}</p>
-                  <a href="#" className="inline-block bg-[#b5892b] text-[#523826] px-6 py-3 no-underline rounded font-bold hover:bg-white hover:-translate-y-1 transition-all">
+                  {/*<a href="#" className="inline-block bg-[#b5892b] text-[#523826] px-6 py-3 no-underline rounded font-bold hover:bg-white hover:-translate-y-1 transition-all">
                     Learn More
-                  </a>
+                  </a>*/}
                 </div>
               </div>
             ))}
@@ -126,9 +127,11 @@ export default function Outstation() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[
-              { day: "Weekdays", times: ["Tuesday & Thursday: 6:00 PM"] },
-              { day: "Saturdays", times: ["Vigil Mass: 5:00 PM", "Confessions: 4:00 - 4:45 PM"] },
-              { day: "Sundays", times: ["8:00 AM (English)", "10:00 AM (Yoruba)"] }
+              { day: "Weekdays", times: ["Friday: 6:00 PM"] },
+              {
+                day: "Saturdays", times: ["Confessions: In the Parish"]
+               },
+              { day: "Sundays", times: ["6:30 AM (English)"] }
             ].map((mass, i) => (
               <div key={i} className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-[#523826] mb-4 border-b-2 border-[#b5892b] pb-2 font-serif">{mass.day}</h3>
@@ -160,9 +163,9 @@ export default function Outstation() {
                 </div>
                 <div className="p-5">
                   <p className="mb-4">{item.content}</p>
-                  <a href="#" className="inline-block bg-[#b5892b] text-[#523826] px-6 py-3 no-underline rounded font-bold hover:bg-white hover:-translate-y-1 transition-all">
+                  {/*<a href="#" className="inline-block bg-[#b5892b] text-[#523826] px-6 py-3 no-underline rounded font-bold hover:bg-white hover:-translate-y-1 transition-all">
                     Learn More
-                  </a>
+                  </a>*/}
                 </div>
               </div>
             ))}
@@ -192,9 +195,9 @@ export default function Outstation() {
                   </div>
                   <div className="p-5">
                     <p className="mb-4">{ministry.content}</p>
-                    <a href="#" className="inline-block bg-[#b5892b] text-[#523826] px-6 py-3 no-underline rounded font-bold hover:bg-white hover:-translate-y-1 transition-all">
+                    {/*<a href="#" className="inline-block bg-[#b5892b] text-[#523826] px-6 py-3 no-underline rounded font-bold hover:bg-white hover:-translate-y-1 transition-all">
                       Join Us
-                    </a>
+                    </a>*/}
                   </div>
                 </div>
               );
@@ -212,7 +215,7 @@ export default function Outstation() {
           </h2>
           <div className="grid gap-5">
             {[
-              { day: "15", month: "Aug", title: "Feast of the Assumption", description: "Holy Day of Obligation. Special masses throughout the day." },
+              { day: "02", month: "Nov", title: "Parish Thanksgiving Sunday", description: "Holy Day of Obligation. Special masse for the day." },
               { day: "10", month: "Sep", title: "Outstation Festival", description: "Annual festival with food, games, and community activities." },
               { day: "20", month: "Sep", title: "Youth Day", description: "Special mass and activities for our youth community." }
             ].map((event, i) => (
@@ -231,16 +234,16 @@ export default function Outstation() {
         </div>
       </section>
 
-      {/* Gallery Section */}
+      {/* Gallery Section 
       <section className="py-12 px-6 bg-[#fbf6ef]" id="gallery">
         <div className="container mx-auto">
           <h2 className="text-center mb-8 text-[#523826] text-3xl font-serif relative pb-4">
-            Photo Gallery
+           Photo Gallery
             <span className="block w-20 h-1 bg-[#b5892b] mx-auto mt-2"></span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { caption: "Our Church Building", placeholder: "Church Building" },
+              { caption: "Our Church Building",placeholder: "Church Building" },
               { caption: "Community Gathering", placeholder: "Community Event" },
               { caption: "Choir Ministry", placeholder: "Choir Performance" },
               { caption: "Children's Program", placeholder: "Children's Program" }
@@ -251,7 +254,7 @@ export default function Outstation() {
                 onClick={() => openModal(`data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'><rect width='300' height='200' fill='%235D4037'/><text x='150' y='100' font-family='Arial' font-size='20' fill='%23D4AF37' text-anchor='middle'>${item.placeholder}</text></svg>`, item.caption)}
               >
                 <img 
-                  src={`data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'><rect width='300' height='200' fill='%235D4037'/><text x='150' y='100' font-family='Arial' font-size='20' fill='%23D4AF37' text-anchor='middle'>${item.placeholder}</text></svg>`}
+                  src={`img/church-building.jpg`}
                   alt={item.caption}
                   className="w-full h-full object-cover transition-transform group-hover:scale-105"
                 />
@@ -262,7 +265,7 @@ export default function Outstation() {
             ))}
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* Contact Section */}
       <section className="py-12 px-6" id="contact">
@@ -286,7 +289,7 @@ export default function Outstation() {
               <div className="flex gap-4 mt-5">
                 {[
                   { icon: "fab fa-facebook-f", href: "#" },
-                  { icon: "fab fa-twitter", href: "#" },
+                  { icon: "fab fa-tiktok", href: "#" },
                   { icon: "fab fa-instagram", href: "#" },
                   { icon: "fab fa-youtube", href: "#" }
                 ].map((social, i) => (

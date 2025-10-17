@@ -39,7 +39,7 @@ const Index = () => {
           <div className="flex items-center justify-center gap-2 sm:gap-3 text-center">
             <Calendar className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
             <p className="text-xs sm:text-sm md:text-base font-medium">
-              Join us for Sunday Mass | Parish: 7AM, 9AM, 11AM, 5PM | Outstation: 8AM
+              Join us for Sunday Mass | Parish: 8:00 AM | Outstation: 6:30AM
             </p>
           </div>
         </div>
@@ -57,19 +57,24 @@ const Index = () => {
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-6 sm:gap-8 lg:gap-12">
-            <LeaderCard 
-              title="Holy Father"
+          
+            <LeaderCard
+              imageSrc="public/img/pope leo xiv.jpeg"
+              className="absolute inset-0 w-full h-full object-cover"
+              title="His Holiness"
               name="Pope Francis"
               subtitle="Supreme Pontiff"
             />
             <LeaderCard 
+              imageSrc="public/img/bishop.jpg"
               title="Archbishop"
               name="Most Rev. Gabriel Abegunrin"
               subtitle="Archdiocese of Ibadan"
             />
             <LeaderCard 
-              title="Parish Priest"
-              name="Rev. Fr. John Doe"
+              imageSrc="public/img/steve.jpg"
+              title="Priest In-charge"
+              name="Rev. Fr. Stephen Udechukwu"
               subtitle="Holy Trinity Catholic Church"
             />
           </div>
@@ -98,11 +103,11 @@ const Index = () => {
               <CardContent className="text-center space-y-4 sm:space-y-6 px-4 sm:px-6 pb-6 sm:pb-8">
                 <p className="text-sm sm:text-base leading-relaxed text-foreground/80">
                   Our main parish offers a vibrant community with multiple daily masses, 
-                  diverse ministries, and programs for all ages. Join us in worship, fellowship, and service.
+                  diverse ministries, and programs for all ages. Join us in Worship, Fellowship, and Service.
                 </p>
                 <div className="bg-primary/5 rounded-lg p-3 sm:p-4 space-y-2">
                   <p className="font-semibold text-sm sm:text-base">Sunday Masses</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">7:00 AM • 9:00 AM • 11:00 AM • 5:00 PM</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">8:00 AM</p>
                   <p className="text-xs sm:text-sm text-muted-foreground">Weekday Masses Available</p>
                 </div>
                 <Link to="/parish" className="block">
@@ -133,8 +138,8 @@ const Index = () => {
                 </p>
                 <div className="bg-[hsl(var(--outstation-brown))]/5 rounded-lg p-3 sm:p-4 space-y-2">
                   <p className="font-semibold text-sm sm:text-base">Mass Schedule</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Sunday: 8:00 AM</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Weekdays: Wed & Fri 6:00 PM</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Sunday: 6:30 AM</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Weekdays: Fri 6:00 PM</p>
                 </div>
                 <Link to="/outstation" className="block">
                   <Button 

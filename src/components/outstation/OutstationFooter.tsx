@@ -20,7 +20,7 @@ export const OutstationFooter = () => {
               <li className="mb-2"><a href="#events" className="text-white no-underline hover:underline">Events Calendar</a></li>
             </ul>
           </div>
-          <div>
+          {/*<div>
             <h3 className="text-[#b5892b] mb-4 font-serif">Resources</h3>
             <ul className="list-none p-0">
               <li className="mb-2"><a href="#" className="text-white no-underline hover:underline">Bulletin</a></li>
@@ -28,10 +28,10 @@ export const OutstationFooter = () => {
               <li className="mb-2"><a href="#" className="text-white no-underline hover:underline">Prayer Requests</a></li>
               <li className="mb-2"><a href="#" className="text-white no-underline hover:underline">Volunteer</a></li>
             </ul>
-          </div>
+          </div>*/}
         </div>
         <div className="mt-8 pt-4 border-t border-white/10">
-          <p>&copy; 2023 St. John of the Cross Catholic Outstation, Elebu, Ibadan. All rights reserved.</p>
+          <p>© { new Date().getFullYear() } St. John of the Cross Catholic Outstation, Elebu, Ibadan. All rights reserved.</p>
         </div>
       </div>
     </footer>
